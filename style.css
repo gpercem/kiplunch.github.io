@@ -3,6 +3,7 @@ body {
     min-height: 100vh;
     font: normal 16px sans-serif;
     padding: 40px 0;
+    overflow-x: hidden;
 }
 
 .container.gallery-container {
@@ -12,11 +13,24 @@ body {
     padding: 30px 50px;
 }
 
-.gallery-container #title {
-    display: block;
+.gallery-container .title {
     margin-left: auto;
     margin-right: auto;
+    margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 50px;
+    user-drag: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.titleDesktop {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .gallery-container h2 {
@@ -86,8 +100,26 @@ body {
     background-color: transparent !important;
 }
 
-@media(max-width: 768px) {
-    body {
-        padding: 0;
+
+
+
+
+
+
+
+.titleMobile {
+    display: none;
+    width: 90%;
+}
+
+@media only screen and (max-width: 768px) {
+    
+
+    .titleDesktop {
+        display: none;
+    }
+
+    .titleMobile {
+        display: block;
     }
 }
