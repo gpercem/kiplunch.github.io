@@ -130,6 +130,9 @@ figcaption {
 }
 
 @media only screen and (max-width: 768px) and (prefers-color-scheme: dark){
+    body {
+        background-color: #20201e;
+    }
     .titleDesktop {
         display: none;
     }
@@ -145,6 +148,9 @@ figcaption {
 }
 
 @media only screen and (min-width: 769px) and (prefers-color-scheme: dark){
+    body {
+        background-color: #20201e;
+    }
     .titleDesktop {
         display: none;
     }
