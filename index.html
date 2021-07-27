@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>the gallery</title>
-  <link rel="stylesheet" href="./style.css">
+  
 
 </head>
 <body>
@@ -17,15 +17,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
-  
-
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">   
 </head>
 <body>
 
 <div class="container gallery-container">
-
-    <img class ="title titleDesktop" src="img/title_desktop.png" alt="Title">
-    <img class ="title titleMobile" src="img/title_mobile.png" alt="Title">
+    <div class="logo-img"></div>
+    <img class ="title titleDesktop" src="img/title_desktop_black.png" alt="Title">
+    <img class ="title titleMobile" src="img/title_mobile_black.png" alt="Title">
+    <img class ="title titleDesktopW" src="img/title_desktop_white.png" alt="Title">
+    <img class ="title titleMobileW" src="img/title_mobile_white.png" alt="Title">
 
     
     
@@ -33,26 +37,26 @@
 
         <div class="row">
 	    <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="art/27072021.png">
-                    <img src="art/27072021.png" alt="27.07.2021 - Route 66">
+                <a class="lightbox" data-caption="Route 66 - 27.07.2021" href="art/27072021.png">
+                    <img class="gallery-img" src="art/27072021.png" alt="">
                 </a>
             </div>
 
 	    <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="art/24072021.png">
-                    <img src="art/24072021.png" alt="24.07.2021 - Ethan from Pokemon">
+                <a class="lightbox" data-caption="The Trainer - 24.07.2021" href="art/24072021.png">
+                    <img class="gallery-img" src="art/24072021.png" alt="">
                 </a>
             </div>
 		
 	    <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="art/23072021.png">
-                    <img src="art/23072021.png" alt="23.07.2021 - Pofuclouds">
+                <a class="lightbox" data-caption="Pofuclouds - 23.07.2021" href="art/23072021.png">
+                    <img class="gallery-img" src="art/23072021.png" alt="">
                 </a>
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="art/22072021.png">
-                    <img src="art/22072021.png" alt="22.07.2021 - Sunrize">
+                <a class="lightbox" data-caption="Sunrize - 22.07.2021" href="art/22072021.png">
+                    <img class="gallery-img" src="art/22072021.png" alt="">
                 </a>
             </div>
 	    
@@ -66,7 +70,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 <script>
-    baguetteBox.run('.tz-gallery');
+    window.addEventListener('load', function() {
+        baguetteBox.run('.tz-gallery');
+    });
 </script>
 </body>
 </html>

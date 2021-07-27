@@ -1,13 +1,13 @@
 body {
-    background-color: #434c50;
+    background-color: #F3F2EF;
     min-height: 100vh;
-    font: normal 16px sans-serif;
+    
     padding: 40px 0;
     overflow-x: hidden;
 }
 
 .container.gallery-container {
-    background-color: #fff;
+    
     color: #35373a;
     min-height: 100vh;
     padding: 30px 50px;
@@ -26,12 +26,7 @@ body {
     -o-user-drag: none;
 }
 
-.titleDesktop {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+
 
 .gallery-container h2 {
     text-align: center;
@@ -103,13 +98,35 @@ body {
 
 
 
+.titleDesktop {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
+.titleDesktopW {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 
 
 .titleMobile {
     display: none;
     width: 90%;
+}
+
+.titleMobileW {
+    display: none;
+    width: 90%;
+}
+
+figcaption {
+    font-size: 22px;
+    font-family: 'Pangolin', cursive !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -122,4 +139,38 @@ body {
     .titleMobile {
         display: block;
     }
+}
+
+@media only screen and (prefers-color-scheme: dark){
+        body {
+            background-color: #20201e;
+        }
+
+        .titleDesktop {
+            display: none;
+        }
+    
+        .titleMobile {
+            display: none;
+        }
+
+        .gallery-img {
+            opacity: 90%;
+        }
+    }
+
+@media only screen
+    and (prefers-color-scheme: dark)
+    and (max-width: 768px) {
+    
+
+    .titleDesktopW {
+        display: none;
+    }
+
+    .titleMobileW {
+        display: block;
+    }
+
+    
 }
