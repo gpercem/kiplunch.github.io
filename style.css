@@ -99,14 +99,14 @@ body {
 
 
 .titleDesktop {
-    display: block;
+    display: none;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
 .titleDesktopW {
-    display: block;
+    display: none;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -129,48 +129,63 @@ figcaption {
     font-family: 'Pangolin', cursive !important;
 }
 
-@media only screen and (max-width: 768px) {
-    
-
+@media only screen and (max-width: 768px) and (prefers-color-scheme: dark){
     .titleDesktop {
         display: none;
     }
-
     .titleMobile {
-        display: block;
+        display: none;
     }
-}
-
-@media only screen and (prefers-color-scheme: dark){
-        body {
-            background-color: #20201e;
-        }
-
-        .titleDesktop {
-            display: none;
-        }
-    
-        .titleMobile {
-            display: none;
-        }
-
-        .gallery-img {
-            opacity: 90%;
-        }
-    }
-
-@media only screen
-    and (prefers-color-scheme: dark)
-    and (max-width: 768px) {
-    
-
     .titleDesktopW {
         display: none;
     }
-
     .titleMobileW {
         display: block;
     }
-
-    
 }
+
+@media only screen and (min-width: 769px) and (prefers-color-scheme: dark){
+    .titleDesktop {
+        display: none;
+    }
+    .titleMobile {
+        display: none;
+    }
+    .titleDesktopW {
+        display: block;
+    }
+    .titleMobileW {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) and (prefers-color-scheme: light){
+    .titleDesktop {
+        display: none;
+    }
+    .titleMobile {
+        display: block;
+    }
+    .titleDesktopW {
+        display: none;
+    }
+    .titleMobileW {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) and (prefers-color-scheme: dark){
+    .titleDesktop {
+        display: block;
+    }
+    .titleMobile {
+        display: none;
+    }
+    .titleDesktopW {
+        display: none;
+    }
+    .titleMobileW {
+        display: none;
+    }
+}
+
